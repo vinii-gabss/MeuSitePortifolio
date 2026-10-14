@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Vinícius Gabriel</title>
+  <meta name="description" content="Portfólio de Vinícius Gabriel, Desenvolvedor de Software. Conheça meus projetos, tecnologias e trajetória.">
+  
+  <!-- Fontes Google: Plus Jakarta Sans para visual moderno e sofisticado -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Folha de estilo principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fundo dinâmico com nuvens/gradiente (facilmente alterável no CSS) -->
+  <div class="sky-background" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="sun-glare"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo / Marca -->
+        <a href="#inicio" class="brand" aria-label="Página Inicial de Vinicius Gabriel">
+          <span class="brand-monogram">VG</span>
+          <span class="brand-divider"></span>
+          <span class="brand-name">Vinícius Gabriel</span>
+        </a>
+
+        <!-- Links de navegação -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active">Sobre</a></li>
+            <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+            <li><a href="#habilidades.htm" class="nav-link">Habilidades</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão Menu Mobile -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+    
+
+    <!-- CONTEÚDO PRINCIPAL (ESTRUTURA EM GRID DE CARDS GLASS) -->
+    <main class="main-content" id="inicio">
+      <div class="cards-grid">
+        
+        <!-- COLUNA DA ESQUERDA -->
+        <div class="column-left">
+          
+          <!-- CARD 1: BOAS-VINDAS / HERO CTA -->
+          <section class="glass-card hero-card" id="sobre">
+            <div class="card-glow"></div>
+            
+            <div class="card-caption">SEJA BEM-VINDO</div>
+            
+            <h1 class="hero-title">
+              Vamos construir <span class="accent-highlight">algo juntos!</span>
+            </h1>
+            
+            <p class="hero-description">
+              Aqui você pode me conhecer melhor, ver meus projetos e acompanhar minha jornada na área de tecnologia.
+            </p>
+            
+            <div class="actions-group">
+              <!-- Botão Principal -->
+              <a href="https://github.com/vinii-gabss" class="btn btn-primary"
+                 id="btnProjects"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                
+                <span>Ver meus projetos</span>
+              </a>
+
+              <!-- Botão Secundário -->
+              <a href="#curriculo" class="btn btn-secondary" id="btnResume">
+                <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                  
+                </svg>
+                <span>Baixar currículo</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- CARD 2: TECNOLOGIA E APRENDIZADO -->
+          <section class="glass-card skills-card" id="habilidades">
+            <div class="card-glow"></div>
+            
+            <div class="skills-header">
+              <!-- Ícone estilizado </> -->
+              <div class="code-badge-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h2 class="skills-title">Tecnologia e aprendizado</h2>
+            </div>
+
+            <p class="skills-description">
+              Sou estudante de Análise e Desenvolvimento de Sistemas e estou sempre em busca de novos desafios e conhecimentos.
+            </p>
+
+            <!-- Tags/Pills das Tecnologias -->
+            <div class="tech-pills-list">
+              <!-- HTML -->
+              <div class="tech-pill" title="HTML5">
+                <svg class="tech-icon html-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M3 2l1.8 17.5 7.2 2 7.2-2L21 2H3zm14.8 5.4l-.2 2.5H8.7l.2 2.5h8.5l-.6 6.3-4.8 1.3-4.8-1.3-.3-3.6h2.4l.2 1.8 2.5.7 2.5-.7.3-3H6.4l-.5-6.2h11.9z"/>
+                </svg>
+                <span>HTML</span>
+              </div>
+
+              <!-- CSS -->
+              <div class="tech-pill" title="CSS3">
+                <svg class="tech-icon css-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M3 2l1.8 17.5 7.2 2 7.2-2L21 2H3zm14.8 5.4l-.2 2.5H8.7l.2 2.5h8.5l-.6 6.3-4.8 1.3-4.8-1.3-.3-3.6h2.4l.2 1.8 2.5.7 2.5-.7.3-3H6.4l-.5-6.2h11.9z"/>
+                </svg>
+                <span>CSS</span>
+              </div>
+
+              <!-- Git -->
+              <div class="tech-pill" title="Git">
+                <svg class="tech-icon git-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M21.6 10.9L13.1 2.4c-.6-.6-1.5-.6-2.1 0L8.9 4.5l2.7 2.7c.6-.2 1.3-.1 1.8.4.5.5.6 1.2.4 1.8l2.6 2.6c.6-.2 1.3-.1 1.8.4.8.8.8 2 0 2.8-.8.8-2 .8-2.8 0-.5-.5-.6-1.3-.4-1.9l-2.4-2.4v4.5c.3.2.5.6.5 1 0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5c0-.4.2-.8.5-1V9.9c-.3-.2-.5-.6-.5-1 0-.5.2-.9.5-1.2L7.9 5.6 2.4 11c-.6.6-.6 1.5 0 2.1l8.5 8.5c.6.6 1.5.6 2.1 0l8.5-8.5c.6-.6.6-1.6.1-2.2z"/>
+                </svg>
+                <span>Git</span>
+              </div>
+
+              <!-- GitHub -->
+              <div class="tech-pill" title="GitHub">
+                <svg class="tech-icon github-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                </svg>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+   
+
+    <div class="footer-redes">
+        <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="https://instagram.com/vinii.gabs/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+   
+
+    
+</footer>
+
+        </div>
+
+        <!-- COLUNA DA DIREITA -->
+        <div class="column-right">
+          
+          <!-- CARD GRANDE: PERFIL & SHOWCASE -->
+          <section class="glass-card profile-card" id="projetos">
+            <div class="card-glow"></div>
+
+            <!-- Avatar Circular com Anel Brilhante -->
+            <div class="avatar-wrapper">
+              <div class="avatar-ring">
+                <!-- Substitua por assets/images/avatar.jpg quando quiser usar sua foto real -->
+                <img 
+                  src="assets/images/javatarJp.jpeg" 
+                  alt="Foto de perfil de Vinicius Gabriel" 
+                  class="avatar-img"
+                >
+              </div>
+            </div>
+
+            <!-- Texto de Apresentação / Bio -->
+            <div class="profile-bio">
+              <p>
+                <strong>Olá, eu sou Vinicius Gabriel, Desenvolvedor Web.</strong> 
+                Sou estudante de Análise e Desenvolvimento de Sistemas (ADS), apaixonado por tecnologia e desenvolvimento de software. Atualmente, estou desenvolvendo minhas habilidades em HTML e CSS, além de possuir conhecimentos em Git e GitHub para versionamento e gerenciamento de projetos. Também tenho conhecimentos iniciais em Python e JavaScript, linguagens que continuo explorando para ampliar minha capacidade de desenvolvimento.
+
+
+              </p>
+            </div>
+
+            <!-- Galeria / Grade de Miniaturas de Projetos (3 Cards) -->
+            <div class="projects-gallery">
+              
+              <!-- Item 1: Código / Editor -->
+              <div class="gallery-item" tabindex="0" role="button" aria-label="Ver projeto de código">
+                <div class="thumb-frame">
+                  <img 
+                    src="assets/images/thumb-code.svg" 
+                    alt="Editor de código de projeto" 
+                    class="thumb-img"
+                  >
+                  <div class="thumb-overlay">
+                    <span class="overlay-text">Editor & Código</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Colaboração / Equipe -->
+              <div class="gallery-item" tabindex="0" role="button" aria-label="Ver projeto em equipe">
+                <div class="thumb-frame">
+                  <img 
+                    src="assets/images/thumb-team.svg" 
+                    alt="Trabalho e planejamento em equipe" 
+                    class="thumb-img"
+                  >
+                  <div class="thumb-overlay">
+                    <span class="overlay-text">Planejamento</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: Interface / Dashboard -->
+              <div class="gallery-item" tabindex="0" role="button" aria-label="Ver projeto de dashboard">
+                <div class="thumb-frame">
+                  <img 
+                    src="assets/images/thumb-dashboard.svg" 
+                    alt="Interface de sistema e dashboard" 
+                    class="thumb-img"
+                  >
+                  <div class="thumb-overlay">
+                    <span class="overlay-text">Dashboard Web</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      
+    </main>
+
+    <!-- RODAPÉ SUTIL -->
+    
+ 
+
+
+  <!-- MODAL DE PREVIEW / DETALHES -->
+  <div class="modal-backdrop" id="previewModal" aria-hidden="true">
+    <div class="modal-box glass-card">
+      <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
+      <div class="modal-body" id="modalContent">
+        <!-- Preenchido dinamicamente pelo script.js -->
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Script com micro-interações -->
+  <script src="script.js"></script>
+
+
+</body>
+</html>

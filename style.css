@@ -1,0 +1,936 @@
+/* ==========================================================================
+   PORTFÓLIO - ESTILO GLASSMORFISMO MODERNO
+   Inspirado no design de referência: tons celestes, cartões translúcidos e tipografia moderna.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   VARIÁVEIS DE DESIGN (CUSTOM PROPERTIES)
+   Altere aqui facilmente cores, fontes e imagem de fundo!
+   -------------------------------------------------------------------------- */
+:root {
+  /* FONTES */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* CORES PRINCIPAIS */
+  --color-primary: #1565c0;          /* Azul botão principal */
+  --color-primary-hover: #0d47a1;    /* Azul hover */
+  --color-primary-light: #2196f3;    /* Azul destaque / gradiente */
+  --color-accent-text: #0284c7;      /* Destaque "algo juntos!" */
+  
+  --color-heading: #0f2847;          /* Azul escuro nobre para títulos */
+  --color-text: #2a4768;             /* Azul acinzentado para leitura */
+  --color-text-muted: #4e6d8f;       /* Texto secundário */
+  --color-badge: #436e9c;            /* "SEJA BEM-VINDO" */
+
+  /* VIDRO / GLASSMORFISMO */
+  --glass-bg: rgba(255, 255, 255, 0.46);
+  --glass-bg-hover: rgba(255, 255, 255, 0.58);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-shadow: 0 18px 45px rgba(15, 45, 80, 0.09), inset 0 1px 2px rgba(255, 255, 255, 0.85);
+  --glass-blur: blur(22px) saturate(190%);
+
+  /* PILL / BADGES */
+  --pill-bg: rgba(255, 255, 255, 0.55);
+  --pill-border: rgba(255, 255, 255, 0.8);
+  --pill-text: #17385c;
+
+  /* BORDAS ARREDONDADAS */
+  --radius-card: 28px;
+  --radius-thumb: 18px;
+  --radius-button: 12px;
+  --radius-pill: 9999px;
+
+  /* TRANSIÇÕES */
+  --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* FUNDO DA PÁGINA:
+     Você pode substituir 'assets/images/background.svg' pelo caminho da sua imagem (ex: .jpg, .png)! */
+  --bg-image: url('assets/images/background.svg');
+}
+
+/* --------------------------------------------------------------------------
+   RESET & CONFIGURAÇÃO BÁSICA
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  line-height: 1.55;
+  background-color: #7bb5ea;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   PLANO DE FUNDO (CÉU, NUVENS & IMAGEM DE FUNDO)
+   -------------------------------------------------------------------------- */
+.sky-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #63a4e2;
+  /* Gradiente celeste natural de fallback */
+  background: 
+    var(--bg-image) center center / cover no-repeat,
+    radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 45%),
+    linear-gradient(135deg, #5b9ee1 0%, #83bae8 45%, #b4daf5 85%, #d6ebf8 100%);
+  background-attachment: fixed;
+}
+
+/* Efeito de brilho solar suave no canto superior direito */
+.sun-glare {
+  position: absolute;
+  top: -10%;
+  right: 15%;
+  width: 45vw;
+  height: 45vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* Nuvens dinâmicas de apoio (visíveis quando não houver imagem) */
+.cloud {
+  position: absolute;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(35px);
+  pointer-events: none;
+  animation: floatClouds 35s infinite alternate ease-in-out;
+}
+
+.cloud-1 {
+  width: 60vw;
+  height: 35vh;
+  top: 5%;
+  left: -10vw;
+}
+
+.cloud-2 {
+  width: 70vw;
+  height: 40vh;
+  bottom: 0;
+  right: -15vw;
+  animation-duration: 45s;
+}
+
+.cloud-3 {
+  width: 45vw;
+  height: 30vh;
+  bottom: 15%;
+  left: 20%;
+  animation-duration: 40s;
+}
+
+
+@keyframes floatClouds {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -15px) scale(1.05); }
+  100% { transform: translate(-20px, 10px) scale(0.98); }
+}
+
+/* --------------------------------------------------------------------------
+   LAYOUT GERAL
+   -------------------------------------------------------------------------- */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   BARRA DE NAVEGAÇÃO (HEADER / NAVBAR)
+   -------------------------------------------------------------------------- */
+.navbar {
+  width: 100%;
+  max-width: 1220px;
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marca / Logo "VG | Vinicius Gabriel" */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(10, 30, 60, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.brand:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.brand-monogram {
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.brand-divider {
+  display: inline-block;
+  width: 1.5px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.brand-name {
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Menu de Navegação Superior */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.footer-redes a {
+    color: inherit;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-redes a:hover {
+    color: #007bff;
+    transform: translateY(-4px);
+}
+
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.25rem 0.15rem;
+  text-shadow: 0 1px 2px rgba(15, 35, 65, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Indicador de link ativo (linha inferior branca com sombra sutil) */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(15, 45, 90, 0.25);
+}
+
+/* Botão Mobile */
+.mobile-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.mobile-toggle .bar {
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+/* --------------------------------------------------------------------------
+   ESTRUTURA PRINCIPAL (GRID DOS CARTOES GLASS)
+   -------------------------------------------------------------------------- */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* Coluna da Esquerda (empilha 2 cards) */
+.column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Coluna da Direita (1 card grande) */
+.column-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   COMPONENTE BASE: GLASS CARD (EFEITO VIDRO FOSCO)
+   -------------------------------------------------------------------------- */
+.glass-card {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--glass-shadow);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.glass-card:hover {
+  background: var(--glass-bg-hover);
+  box-shadow: 0 24px 50px rgba(15, 45, 80, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+/* Brilho suave sutil interno */
+.card-glow {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 1: HERO / BOAS-VINDAS
+   -------------------------------------------------------------------------- */
+.hero-card {
+  padding: 2.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-caption {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-badge);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.55rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--color-heading);
+  margin-bottom: 1.15rem;
+}
+
+.accent-highlight {
+  color: var(--color-accent-text);
+  display: inline;
+}
+
+.hero-description {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 2.2rem;
+  max-width: 480px;
+}
+
+/* Grupo de Botões de Ação */
+.actions-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+/* Botão Primário ("Ver meus projetos") */
+.btn-primary {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(21, 101, 192, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Botão Secundário ("Baixar currículo") */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--color-heading);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(15, 45, 80, 0.05);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.65);
+  color: #0c2b4e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(15, 45, 80, 0.09);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 2: TECNOLOGIA E APRENDIZADO
+   -------------------------------------------------------------------------- */
+.skills-card {
+  padding: 2.2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Quadrado de vidro com o ícone </> */
+.code-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  color: #1565c0;
+  box-shadow: 0 4px 12px rgba(21, 101, 192, 0.1);
+  flex-shrink: 0;
+}
+
+.skills-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: -0.015em;
+}
+
+.skills-description {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  margin-bottom: 1.6rem;
+}
+
+/* Badges / Chips de Tecnologias */
+.tech-pills-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.15rem;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--pill-text);
+  box-shadow: 0 2px 6px rgba(15, 45, 80, 0.05);
+  cursor: default;
+  transition: var(--transition-smooth);
+}
+
+.tech-pill:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(15, 45, 80, 0.1);
+}
+
+.tech-icon {
+  flex-shrink: 0;
+}
+
+.html-icon { color: #e44d26; }
+.css-icon  { color: #264de4; }
+.git-icon  { color: #f05032; }
+.github-icon { color: #24292e; }
+
+/* --------------------------------------------------------------------------
+   COLUNA DA DIREITA: CARD DE PERFIL & SHOWCASE
+   -------------------------------------------------------------------------- */
+.profile-card {
+  height: 100%;
+  padding: 3rem 2.5rem 2.2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Avatar Circular com Borda de Luz */
+.avatar-wrapper {
+  margin-bottom: 2rem;
+}
+
+.avatar-ring {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.45));
+  box-shadow: 0 10px 25px rgba(15, 45, 80, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.avatar-ring:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px rgba(15, 45, 80, 0.16), 0 0 0 2px rgba(255, 255, 255, 0.95);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bio / Apresentação */
+.profile-bio {
+  max-width: 530px;
+  margin-bottom: 2.2rem;
+}
+
+.profile-bio p {
+  font-size: 1.05rem;
+  line-height: 1.62;
+  color: var(--color-heading);
+}
+
+.profile-bio strong {
+  font-weight: 700;
+  color: #0b233e;
+}
+
+/* Galeria de Miniaturas / Cards Inferiores (3 cards lado a lado) */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-thumb);
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 14px rgba(15, 45, 80, 0.08);
+  aspect-ratio: 4 / 5;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  outline: none;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(15, 45, 80, 0.18);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.thumb-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .thumb-img {
+  transform: scale(1.06);
+}
+
+/* Overlay ao passar o mouse */
+.thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 32, 60, 0.75) 0%, rgba(10, 32, 60, 0) 65%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-item:hover .thumb-overlay,
+.gallery-item:focus-visible .thumb-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+/* --------------------------------------------------------------------------
+   MODAL DE PREVIEW / DETALHES DO PROJETO
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 30, 60, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 620px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 25px 60px rgba(10, 30, 60, 0.25);
+  padding: 2.5rem;
+  position: relative;
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-heading);
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.6;
+  transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.modal-body h3 {
+  font-size: 1.5rem;
+  color: var(--color-heading);
+  margin-bottom: 0.75rem;
+}
+
+.modal-body p {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.modal-body .modal-img-preview {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVIDADE (TABLETS E CELULARES)
+   -------------------------------------------------------------------------- */
+
+/* Telas médias (Laptops menores e Tablets - abaixo de 1024px) */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .column-right {
+    order: 2;
+  }
+
+  .column-left {
+    order: 1;
+  }
+
+  .hero-card,
+  .skills-card,
+  .profile-card {
+    padding: 2.2rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Telas pequenas (Smartphones - abaixo de 768px) */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    margin: 1rem auto;
+  }
+
+  /* Menu Mobile */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 15px 35px rgba(10, 30, 60, 0.15);
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    color: var(--color-heading);
+    text-shadow: none;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .nav-link.active {
+    color: var(--color-primary);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  /* Cards no mobile */
+  .hero-card,
+  .skills-card,
+  .profile-card {
+    padding: 1.75rem 1.4rem;
+    border-radius: 22px;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .actions-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .avatar-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .projects-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+  }
+
+  .tech-pills-list {
+    gap: 0.5rem;
+  }
+
+  .tech-pill {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Smartphones muito estreitos (abaixo de 420px) */
+@media (max-width: 420px) {
+  .projects-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.footer {
+    position: relative;
+}
+
+.footer-redes {
+    
+    bottom: 25px;
+    left: 0px;
+
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.footer-redes a {
+    color: inherit;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    gap: 25px;
+}
+
+.footer-redes a:hover {
+    color: #007bff;
+    transform: translateY(-4px);
+}
+
+
