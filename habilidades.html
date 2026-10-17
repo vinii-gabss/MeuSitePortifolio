@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades - Vinícius Gabriel</title>
+    <meta name="description"
+        content="Confira os projetos desenvolvidos por Vinícius Gabriel: websites modernos, interfaces responsivas e aplicações web.">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Folha de estilo exclusiva para esta página -->
+    <link rel="stylesheet" href="habilidades.css">
+</head>
+
+<body>
+
+    <!-- Fundo dinâmico com nuvens celestes -->
+    <div class="sky-background" aria-hidden="true">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="sun-glare"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <header class="navbar" id="navbar">
+            <div class="nav-container">
+                <!-- Logo / Marca -->
+                <a href="index.html" class="brand" aria-label="Ir para página inicial">
+                    <span class="brand-monogram">VG</span>
+                    <span class="brand-divider"></span>
+                    <span class="brand-name">Vinícius Gabriel</span>
+                </a>
+
+                <!-- Menu de Navegação -->
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Sobre</a></li>
+                        <li><a href="projeto.html" class="nav-link active">Projetos</a></li>
+                        <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+                        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Botão Mobile -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação"
+                    aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL (GRID COM CARDS GLASS) -->
+        <main class="main-content" id="conteudo-projetos">
+            <div class="cards-grid">
+
+                <!-- COLUNA DA ESQUERDA -->
+                <div class="column-left">
+
+                    <!-- CARD 1: MEUS PROJETOS & FILTROS -->
+                    <section class="glass-card intro-card" aria-labelledby="intro-title">
+                        <div class="card-glow"></div>
+
+                        <!-- Cabeçalho do Card com Ícone de Código -->
+                        <div class="header-badge-row">
+                            <div class="icon-badge" aria-hidden="true">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <span class="badge-caption">MEUS PROJETOS</span>
+                        </div>
+
+                        <!-- Título Principal -->
+                        <h1 class="card-title" id="intro-title">
+                            Ideias que se tornam<br>sites reais.
+                        </h1>
+
+                        <!-- Descrição -->
+                        <p class="card-text">
+                            Aqui estão alguns dos projetos que desenvolvi durante minha jornada de estudos. Cada um
+                            deles foi uma oportunidade de praticar, aprender e evoluir como desenvolvedor.
+                        </p>
+
+                        <!-- Filtros por Categoria -->
+                        <div class="filter-pills-row" role="tablist" aria-label="Filtrar projetos por categoria">
+                            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                                Todos
+                            </button>
+                            <button class="filter-btn" data-filter="html-css" role="tab" aria-selected="false">
+                                HTML e CSS
+                            </button>
+                            <button class="filter-btn" data-filter="javascript" role="tab" aria-selected="false">
+                                JavaScript
+                            </button>
+                            <button class="filter-btn" data-filter="python" role="tab" aria-selected="false">
+                                Python
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- CARD 2: EM BREVE / MAIS PROJETOS -->
+                    <section class="glass-card soon-card" aria-labelledby="soon-title">
+                        <div class="card-glow"></div>
+
+                        <!-- Cabeçalho do Card com Ícone de Lâmpada -->
+                        <div class="header-badge-row">
+                            <div class="icon-badge" aria-hidden="true">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+                            <span class="badge-caption">EM BREVE</span>
+                        </div>
+
+                        <!-- Título Secundário -->
+                        <h2 class="card-title-secondary" id="soon-title">
+                            Mais projetos<br>na minha jornada
+                        </h2>
+
+                        <!-- Descrição -->
+                        <p class="card-text-secondary">
+                            Estou sempre desenvolvendo novos projetos e aprendendo novas tecnologias. Volte em breve
+                            para ver as novidades!
+                        </p>
+
+                        <!-- Links para Redes Sociais -->
+                        <div class="social-icons-row">
+                            <a href="https://github.com/vinii-gabss" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="Perfil do GitHub de Vinicius Gabriel">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                                aria-label="Perfil do LinkedIn de Vinicius Gabriel">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:viniigabs@gmail.com" class="social-link"
+                                aria-label="Enviar email para Vinicius Gabriel">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- COLUNA DA DIREITA: PROJETOS EM DESTAQUE -->
+                <div class="column-right">
+
+                    <section class="glass-card featured-projects-card" aria-labelledby="featured-title">
+                        <div class="card-glow"></div>
+
+                        <!-- Topo do Card de Projetos -->
+                        <div class="projects-header-row">
+                            <div class="projects-header-left">
+                                <span class="badge-caption">PROJETOS EM DESTAQUE</span>
+                                <h2 class="projects-main-title" id="featured-title">
+                                    Confira alguns dos meus projetos
+                                </h2>
+                            </div>
+                            <div class="projects-header-right">
+                                <span class="future-tagline">/ Construindo o meu futuro</span>
+                            </div>
+                        </div>
+
+                        <!-- GRADE COM OS 4 PROJETOS -->
+                        <div class="projects-grid" id="projectsGrid">
+
+                            <!-- PROJETO 1: GAMES ZONE -->
+                            <article class="project-card-item" data-category="html-css" data-title="Games Zone">
+                                <div class="project-thumb-frame">
+                                    <img src="assets/images/thumb-gameszone.svg"
+                                        alt="Preview do site Games Zone com jogos Minecraft e Red Dead Redemption"
+                                        class="project-thumb-img" loading="lazy">
+                                </div>
+
+                                <div class="project-info">
+                                    <h3 class="project-name">Games Zone</h3>
+                                    <p class="project-description">
+                                        Site de jogos com design moderno e responsivo.
+                                    </p>
+
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">HTML</span>
+                                        <span class="project-tag">CSS</span>
+                                        <span class="project-tag">Responsivo</span>
+                                    </div>
+
+                                    <div class="project-actions-row">
+                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
+                                            data-project="0">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            <span>Visualizar site</span>
+                                        </button>
+                                        <a href="https://github.com/vinii-gabss" target="_blank"
+                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>Ver código</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- PROJETO 2: MEU CARRO -->
+                            <article class="project-card-item" data-category="html-css" data-title="Meu Carro">
+                                <div class="project-thumb-frame">
+                                    <img src="assets/images/thumb-meucarro.svg"
+                                        alt="Preview do site automotivo Meu Carro com showroom de veículos esportivos"
+                                        class="project-thumb-img" loading="lazy">
+                                </div>
+
+                                <div class="project-info">
+                                    <h3 class="project-name">Meu Carro</h3>
+                                    <p class="project-description">
+                                        Site automotivo com informações de veículos e layout moderno.
+                                    </p>
+
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">HTML</span>
+                                        <span class="project-tag">CSS</span>
+                                        <span class="project-tag">Responsivo</span>
+                                    </div>
+
+                                    <div class="project-actions-row">
+                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
+                                            data-project="1">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            <span>Visualizar site</span>
+                                        </button>
+                                        <a href="https://github.com/vinii-gabss" target="_blank"
+                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>Ver código</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- PROJETO 3: GRUPO INTEGRADO -->
+                            <article class="project-card-item" data-category="html-css" data-title="Grupo Integrado">
+                                <div class="project-thumb-frame">
+                                    <img src="assets/images/thumb-grupointegrado.svg"
+                                        alt="Preview da página institucional Grupo Integrado com arquitetura moderna e cursos"
+                                        class="project-thumb-img" loading="lazy">
+                                </div>
+
+                                <div class="project-info">
+                                    <h3 class="project-name">Grupo Integrado</h3>
+                                    <p class="project-description">
+                                        Página institucional com foco em apresentação de cursos e informações.
+                                    </p>
+
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">HTML</span>
+                                        <span class="project-tag">CSS</span>
+                                        <span class="project-tag">Layout Moderno</span>
+                                    </div>
+
+                                    <div class="project-actions-row">
+                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
+                                            data-project="2">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            <span>Visualizar site</span>
+                                        </button>
+                                        <a href="https://github.com/vinii-gabss" target="_blank"
+                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>Ver código</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- PROJETO 4: CALCULADORA -->
+                            <article class="project-card-item" data-category="javascript" data-title="Calculadora">
+                                <div class="project-thumb-frame">
+                                    <img src="assets/images/thumb-calculadora.svg"
+                                        alt="Preview da aplicação interativa Calculadora moderna com DevTools"
+                                        class="project-thumb-img" loading="lazy">
+                                </div>
+
+                                <div class="project-info">
+                                    <h3 class="project-name">Calculadora</h3>
+                                    <p class="project-description">
+                                        Projeto simples de calculadora com interface interativa.
+                                    </p>
+
+                                    <div class="project-tags-row">
+                                        <span class="project-tag">HTML</span>
+                                        <span class="project-tag">CSS</span>
+                                        <span class="project-tag">JavaScript</span>
+                                    </div>
+
+                                    <div class="project-actions-row">
+                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
+                                            data-project="3">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            <span>Visualizar site</span>
+                                        </button>
+                                        <a href="https://github.com/vinii-gabss" target="_blank"
+                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
+                                            <i class="fa-brands fa-github"></i>
+                                            <span>Ver código</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <!-- NOTA INFORMATIVA INFERIOR -->
+                        <div class="projects-footer-note">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            <span>Os projetos são atualizados conforme eu aprendo e desenvolvo novas habilidades.</span>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL DE PREVIEW DOS PROJETOS -->
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <button type="button" class="modal-close" id="modalCloseBtn"
+                aria-label="Fechar janela de detalhes">&times;</button>
+            <div id="modalDetailsContent">
+                <!-- Conteúdo inserido dinamicamente via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE MICRO-INTERAÇÕES (FILTRAGEM, MODAL E MENU MOBILE) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Menu Mobile
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('open');
+                    const isOpen = navMenu.classList.contains('open');
+                    mobileToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                navMenu.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // 2. Sistema de Filtro dos Projetos
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card-item');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'flex';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(12px)';
+                            setTimeout(() => {
+                                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 40);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 3. Modal de Visualização Rápida dos Projetos
+            const modal = document.getElementById('projectModal');
+            const modalClose = document.getElementById('modalCloseBtn');
+            const modalContent = document.getElementById('modalDetailsContent');
+            const previewButtons = document.querySelectorAll('.open-preview-btn');
+
+            const projectsData = [
+                {
+                    title: 'Games Zone',
+                    category: 'Front-end & Games UI',
+                    img: 'assets/images/thumb-gameszone.svg',
+                    description: 'Portal de entretenimento e jogos com catálogo visual dinâmico, layouts imersivos inspirados em títulos de sucesso como Minecraft e Red Dead Redemption, totalmente responsivo.',
+                    tags: ['HTML5', 'CSS3', 'Design Responsivo', 'Flexbox / Grid']
+                },
+                {
+                    title: 'Meu Carro',
+                    category: 'Web Design Automotivo',
+                    img: 'assets/images/thumb-meucarro.svg',
+                    description: 'Showroom digital moderno para exibição de veículos de luxo e alta performance, com estética visual sofisticada em modo escuro, tipografia arrojada e detalhes técnicos.',
+                    tags: ['HTML5', 'CSS3', 'Layout Moderno', 'UI/UX']
+                },
+                {
+                    title: 'Grupo Integrado',
+                    category: 'Página Institucional',
+                    img: 'assets/images/thumb-grupointegrado.svg',
+                    description: 'Site institucional focado na apresentação clara de cursos acadêmicos, diferenciais de infraestrutura moderna e canais diretos de contato para futuros estudantes.',
+                    tags: ['HTML5', 'CSS3', 'Grid Layout', 'Identidade Visual']
+                },
+                {
+                    title: 'Calculadora Interativa',
+                    category: 'Aplicação Web Interativa',
+                    img: 'assets/images/thumb-calculadora.svg',
+                    description: 'Calculadora completa construída com JavaScript puro, oferecendo operações matemáticas essenciais, histórico visual e suporte a teclado numérico com interface intuitiva.',
+                    tags: ['JavaScript Vanilla', 'HTML5', 'CSS3 Moderno', 'Lógica de Programação']
+                }
+            ];
+
+            previewButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const projectIndex = parseInt(btn.getAttribute('data-project'), 10);
+                    const proj = projectsData[projectIndex] || projectsData[0];
+
+                    const tagsHtml = proj.tags.map(t => `<span class="project-tag">${t}</span>`).join('');
+
+                    modalContent.innerHTML = `
+            <span class="badge-caption" style="display:block; margin-bottom: 0.25rem;">${proj.category}</span>
+            <h3 style="font-size: 1.6rem; color: #0f2847; font-weight: 800; margin-bottom: 0.5rem;">${proj.title}</h3>
+            <img src="${proj.img}" alt="${proj.title}" class="modal-body-img" />
+            <p style="color: #2a4768; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">${proj.description}</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
+              ${tagsHtml}
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://github.com/vinii-gabss" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-primary" style="padding: 0.65rem 1.25rem;">
+                <i class="fa-brands fa-github"></i> Visitar Repositório
+              </a>
+            </div>
+          `;
+
+                    modal.classList.add('active');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            };
+
+            if (modalClose) {
+                modalClose.addEventListener('click', closeModal);
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

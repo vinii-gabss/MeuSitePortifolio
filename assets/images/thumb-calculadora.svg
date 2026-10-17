@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Dark Palette -->
+    <linearGradient id="calc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Calculator Body Gradient -->
+    <linearGradient id="calc-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f293d" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Keypad Button Gradient -->
+    <linearGradient id="key-normal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Keypad Operator Gradient -->
+    <linearGradient id="key-op" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <linearGradient id="key-equals" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <filter id="calc-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#calc-bg)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="600" height="48" fill="#0b0f17" />
+  <line x1="0" y1="48" x2="600" y2="48" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Logo -->
+  <g transform="translate(36, 17)">
+    <text x="0" y="12" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="-0.02em">
+      Dev<tspan fill="#38bdf8">Tools</tspan>
+    </text>
+  </g>
+
+  <!-- Nav links -->
+  <text x="280" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">Início</text>
+  <text x="325" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94a3b8">Projetos</text>
+  <text x="385" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94a3b8">Contato</text>
+
+  <!-- Search icon -->
+  <circle cx="550" cy="24" r="12" fill="#172033" />
+  <path d="M547 21 A3.5 3.5 0 1 1 553 21 A3.5 3.5 0 1 1 547 21 M552 24 L555 27" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+
+  <!-- LEFT HERO CONTENT -->
+  <g transform="translate(38, 90)">
+    <rect x="0" y="0" width="76" height="20" rx="10" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+    <text x="12" y="14" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#38bdf8" letter-spacing="0.05em">JAVASCRIPT</text>
+
+    <text x="0" y="48" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="26" font-weight="800" fill="#ffffff" line-height="1.15">
+      Calculadora
+    </text>
+
+    <text x="0" y="80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94a3b8">
+      Desenvolvida em JavaScript vanilla com
+    </text>
+    <text x="0" y="96" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94a3b8">
+      operações aritméticas, histórico em memória
+    </text>
+    <text x="0" y="112" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94a3b8">
+      e teclado com suporte tátil e responsivo.
+    </text>
+
+    <!-- Code pill info -->
+    <rect x="0" y="136" width="160" height="26" rx="6" fill="#172033" stroke="#334155" stroke-width="1" />
+    <text x="12" y="153" font-family="'Courier New', monospace" font-size="11" fill="#38bdf8">&gt; const res = a + b;</text>
+  </g>
+
+  <!-- RIGHT HERO: SLEEK CALCULATOR COMPONENT -->
+  <g transform="translate(360, 68)" filter="url(#calc-shadow)">
+    <!-- Main Shell -->
+    <rect x="0" y="0" width="200" height="252" rx="16" fill="url(#calc-body)" stroke="#334155" stroke-width="1.5" />
+
+    <!-- Top window dots -->
+    <circle cx="16" cy="15" r="3.5" fill="#ef4444" />
+    <circle cx="28" cy="15" r="3.5" fill="#f59e0b" />
+    <circle cx="40" cy="15" r="3.5" fill="#10b981" />
+
+    <!-- Display Screen -->
+    <rect x="14" y="30" width="172" height="46" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+    <text x="174" y="62" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="end">0</text>
+    <text x="174" y="42" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="500" fill="#64748b" text-anchor="end">RAD | DEG</text>
+
+    <!-- Button Grid: 4 columns x 4 rows -->
+    <!-- Row 1: C, +/-, %, ÷ -->
+    <rect x="14" y="86" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="32" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle">C</text>
+
+    <rect x="59" y="86" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="77" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">±</text>
+
+    <rect x="104" y="86" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="122" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">%</text>
+
+    <rect x="149" y="86" width="37" height="32" rx="6" fill="url(#key-op)" />
+    <text x="167" y="106" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">÷</text>
+
+    <!-- Row 2: 7, 8, 9, × -->
+    <rect x="14" y="126" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="32" y="146" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">7</text>
+
+    <rect x="59" y="126" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="77" y="146" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">8</text>
+
+    <rect x="104" y="126" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="122" y="146" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">9</text>
+
+    <rect x="149" y="126" width="37" height="32" rx="6" fill="url(#key-op)" />
+    <text x="167" y="146" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">×</text>
+
+    <!-- Row 3: 4, 5, 6, - -->
+    <rect x="14" y="166" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="32" y="186" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">4</text>
+
+    <rect x="59" y="166" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="77" y="186" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">5</text>
+
+    <rect x="104" y="166" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="122" y="186" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">6</text>
+
+    <rect x="149" y="166" width="37" height="32" rx="6" fill="url(#key-op)" />
+    <text x="167" y="186" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">−</text>
+
+    <!-- Row 4: 1, 2, 3, + -->
+    <rect x="14" y="206" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="32" y="226" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">1</text>
+
+    <rect x="59" y="206" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="77" y="226" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">2</text>
+
+    <rect x="104" y="206" width="37" height="32" rx="6" fill="url(#key-normal)" />
+    <text x="122" y="226" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">3</text>
+
+    <rect x="149" y="206" width="37" height="32" rx="6" fill="url(#key-equals)" />
+    <text x="167" y="226" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">=</text>
+  </g>
+</svg>

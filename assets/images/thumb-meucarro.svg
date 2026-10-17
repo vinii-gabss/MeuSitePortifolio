@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="mc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090c10" />
+      <stop offset="60%" stop-color="#121824" />
+      <stop offset="100%" stop-color="#0a0d14" />
+    </linearGradient>
+
+    <!-- Headlight Beam Gradient -->
+    <linearGradient id="headlight-glow" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Car Body Metallic Gradient -->
+    <linearGradient id="car-paint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d3748" />
+      <stop offset="30%" stop-color="#1a202c" />
+      <stop offset="70%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="yellow-btn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+
+    <radialGradient id="floor-glow" cx="70%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#090c10" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#mc-bg)" />
+  <rect x="0" y="200" width="600" height="140" fill="url(#floor-glow)" />
+
+  <!-- Navbar -->
+  <rect x="0" y="0" width="600" height="48" fill="#0b0f17" />
+  <line x1="0" y1="48" x2="600" y2="48" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Logo -->
+  <g transform="translate(36, 17)">
+    <rect x="0" y="0" width="16" height="14" rx="2" fill="#fbbf24" />
+    <path d="M4 10 L8 4 L12 10" stroke="#0f172a" stroke-width="2" stroke-linecap="round" fill="none" />
+    <text x="24" y="12" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="-0.02em">
+      Meu<tspan fill="#fbbf24">Carro</tspan>
+    </text>
+  </g>
+
+  <!-- Nav links -->
+  <text x="260" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#ffffff">Início</text>
+  <text x="310" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94a3b8">Modelos</text>
+  <text x="370" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94a3b8">Sobre</text>
+  <text x="420" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#94a3b8">Contato</text>
+
+  <!-- Search icon -->
+  <circle cx="550" cy="24" r="12" fill="#172033" />
+  <path d="M547 21 A3.5 3.5 0 1 1 553 21 A3.5 3.5 0 1 1 547 21 M552 24 L555 27" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+
+  <!-- LEFT HERO CONTENT -->
+  <g transform="translate(38, 90)">
+    <rect x="0" y="0" width="94" height="20" rx="10" fill="rgba(251, 191, 36, 0.15)" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1" />
+    <text x="12" y="14" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.05em">PREMIUM SHOWROOM</text>
+
+    <text x="0" y="52" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="25" font-weight="800" fill="#ffffff" line-height="1.15">
+      Seu próximo
+    </text>
+    <text x="0" y="82" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="25" font-weight="800" fill="#ffffff">
+      carro está aqui
+    </text>
+
+    <text x="0" y="112" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94a3b8">
+      Descubra veículos selecionados com alta
+    </text>
+    <text x="0" y="128" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94a3b8">
+      performance, garantia e tecnologia.
+    </text>
+
+    <!-- Button -->
+    <rect x="0" y="148" width="130" height="34" rx="8" fill="url(#yellow-btn)" />
+    <text x="24" y="170" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#0f172a">
+      Ver modelos &rarr;
+    </text>
+  </g>
+
+  <!-- RIGHT HERO: LUXURY SPORTS CAR -->
+  <g transform="translate(265, 85)">
+    <!-- Studio back wall lighting -->
+    <ellipse cx="200" cy="110" rx="140" ry="60" fill="#1e293b" opacity="0.4" />
+    <line x1="20" y1="190" x2="310" y2="190" stroke="#334155" stroke-width="1" opacity="0.6" />
+
+    <!-- Headlight light beam spread -->
+    <polygon points="80,140 -50,110 -50,190" fill="url(#headlight-glow)" opacity="0.4" />
+
+    <!-- Car Ground Shadow -->
+    <ellipse cx="170" cy="188" rx="140" ry="14" fill="#020617" opacity="0.9" />
+
+    <!-- Car Body Shape (Realistic 3/4 front view silhouette) -->
+    <!-- Rear Cabin & Roof line -->
+    <path d="M 50 155
+             C 70 148, 105 130, 130 112
+             C 150 96, 210 94, 250 110
+             C 275 120, 290 135, 305 145
+             C 310 152, 305 165, 295 170
+             C 285 172, 270 174, 250 174
+             C 240 160, 225 152, 205 152
+             C 185 152, 170 160, 160 174
+             L 100 174
+             C 90 160, 75 152, 55 152
+             C 45 152, 38 156, 32 162
+             C 25 160, 20 156, 28 150
+             Z"
+          fill="url(#car-paint)" stroke="#475569" stroke-width="1" />
+
+    <!-- Windshield & Windows -->
+    <path d="M 134 112 C 152 98, 205 97, 244 112 C 235 128, 210 136, 170 138 C 145 138, 138 128, 134 112 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <path d="M 248 114 C 265 122, 275 132, 282 140 L 250 140 Z" fill="#090d16" />
+
+    <!-- Body highlight line (sleek reflection) -->
+    <path d="M 40 152 C 90 145, 170 144, 290 146" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M 140 102 C 180 100, 220 103, 246 112" stroke="#cbd5e1" stroke-width="1.5" fill="none" opacity="0.75" />
+
+    <!-- Front Bumper & Grill -->
+    <path d="M 28 152 C 32 165, 35 174, 50 175 L 85 175" fill="#020617" stroke="#1e293b" stroke-width="1" />
+    <rect x="35" y="158" width="16" height="8" rx="2" fill="#0f172a" stroke="#f59e0b" stroke-width="0.8" />
+
+    <!-- Futuristic Glowing Headlight -->
+    <path d="M 42 148 L 70 146 L 65 152 L 40 153 Z" fill="#38bdf8" />
+    <polygon points="42,148 70,146 68,150 44,151" fill="#ffffff" />
+    <circle cx="48" cy="150" r="3" fill="#ffffff" />
+
+    <!-- Front Wheel -->
+    <g transform="translate(62, 170)">
+      <circle cx="0" cy="0" r="19" fill="#090d16" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="13" fill="#1e293b" stroke="#64748b" stroke-width="1" />
+      <!-- Golden / Alloy Spokes -->
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="-7" y1="-7" x2="7" y2="7" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="-7" y1="7" x2="7" y2="-7" stroke="#f59e0b" stroke-width="1.8" />
+      <circle cx="0" cy="0" r="4" fill="#0f172a" />
+    </g>
+
+    <!-- Rear Wheel -->
+    <g transform="translate(210, 170)">
+      <circle cx="0" cy="0" r="19" fill="#090d16" stroke="#334155" stroke-width="2" />
+      <circle cx="0" cy="0" r="13" fill="#1e293b" stroke="#64748b" stroke-width="1" />
+      <!-- Golden Spokes -->
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="-7" y1="-7" x2="7" y2="7" stroke="#f59e0b" stroke-width="1.8" />
+      <line x1="-7" y1="7" x2="7" y2="-7" stroke="#f59e0b" stroke-width="1.8" />
+      <circle cx="0" cy="0" r="4" fill="#0f172a" />
+    </g>
+
+    <!-- Door Line & Handle -->
+    <path d="M 160 138 L 155 172" stroke="#1e293b" stroke-width="1.2" />
+    <rect x="168" y="142" width="10" height="2" rx="1" fill="#475569" />
+  </g>
+</svg>
