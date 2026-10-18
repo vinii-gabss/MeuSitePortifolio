@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades - Vinícius Gabriel</title>
     <meta name="description"
-        content="Confira os projetos desenvolvidos por Vinícius Gabriel: websites modernos, interfaces responsivas e aplicações web.">
+        content="Conheça as tecnologias, ferramentas e habilidades de Vinícius Gabriel: HTML5, CSS3, JavaScript, Git, GitHub, Python, VS Code, Figma, Canva e soft skills.">
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <!-- Fontes Google: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -17,13 +17,13 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Folha de estilo exclusiva para esta página -->
-    <link rel="stylesheet" href="habilidades.css">
+    <!-- Folha de Estilos Principal -->
+    <link rel="stylesheet" href="projeto.css">
 </head>
 
 <body>
 
-    <!-- Fundo dinâmico com nuvens celestes -->
+    <!-- Fundo dinâmico com nuvens celestes e iluminação -->
     <div class="sky-background" aria-hidden="true">
         <div class="cloud cloud-1"></div>
         <div class="cloud cloud-2"></div>
@@ -32,11 +32,11 @@
     </div>
 
     <div class="page-wrapper">
-        <!-- BARRA DE NAVEGAÇÃO -->
+        <!-- BARRA DE NAVEGAÇÃO / HEADER -->
         <header class="navbar" id="navbar">
             <div class="nav-container">
                 <!-- Logo / Marca -->
-                <a href="index.html" class="brand" aria-label="Ir para página inicial">
+                <a href="index.html" class="brand" aria-label="Ir para página inicial de Vinícius Gabriel">
                     <span class="brand-monogram">VG</span>
                     <span class="brand-divider"></span>
                     <span class="brand-name">Vinícius Gabriel</span>
@@ -45,14 +45,15 @@
                 <!-- Menu de Navegação -->
                 <nav class="nav-menu" id="navMenu">
                     <ul class="nav-list">
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
                         <li><a href="index.html" class="nav-link">Sobre</a></li>
-                        <li><a href="projeto.html" class="nav-link active">Projetos</a></li>
-                        <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
-                        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                        <li><a href="projeto.html" class="nav-link">Projetos</a></li>
+                        <li><a href="habilidades.html" class="nav-link active">Habilidades</a></li>
+
                     </ul>
                 </nav>
 
-                <!-- Botão Mobile -->
+                <!-- Botão Mobile Toggle -->
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação"
                     aria-expanded="false">
                     <span class="bar"></span>
@@ -62,264 +63,415 @@
             </div>
         </header>
 
-        <!-- CONTEÚDO PRINCIPAL (GRID COM CARDS GLASS) -->
-        <main class="main-content" id="conteudo-projetos">
+        <!-- CONTEÚDO PRINCIPAL (ESTRUTURA EM DUAS COLUNAS COM CARDS GLASS) -->
+        <main class="main-content" id="conteudo-habilidades">
             <div class="cards-grid">
 
-                <!-- COLUNA DA ESQUERDA -->
+                <!-- ==========================================
+             COLUNA DA ESQUERDA (2 CARDS EMPILHADOS)
+             ========================================== -->
                 <div class="column-left">
 
-                    <!-- CARD 1: MEUS PROJETOS & FILTROS -->
-                    <section class="glass-card intro-card" aria-labelledby="intro-title">
+                    <!-- CARD 1: MINHAS HABILIDADES -->
+                    <section class="glass-card skills-intro-card" aria-labelledby="skills-intro-title">
                         <div class="card-glow"></div>
 
-                        <!-- Cabeçalho do Card com Ícone de Código -->
-                        <div class="header-badge-row">
-                            <div class="icon-badge" aria-hidden="true">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
-                            <span class="badge-caption">MEUS PROJETOS</span>
+                        <div>
+                            <span class="skills-badge-caption">MINHAS HABILIDADES</span>
+                            <h1 class="skills-hero-title" id="skills-intro-title">
+                                Tecnologias que<br>eu domino.
+                            </h1>
+                            <p class="skills-desc-text">
+                                Aqui estão as principais tecnologias e ferramentas que eu utilizo no meu dia a dia.
+                                Estou sempre em evolução, aprendendo coisas novas e buscando melhorar minhas
+                                habilidades.
+                            </p>
                         </div>
 
-                        <!-- Título Principal -->
-                        <h1 class="card-title" id="intro-title">
-                            Ideias que se tornam<br>sites reais.
-                        </h1>
+                        <!-- Painel de Destaques Inferior -->
+                        <div class="skills-highlights-panel">
+                            <!-- Item 1: Código / Aprendizado -->
+                            <div class="highlight-item">
+                                <div class="highlight-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div class="highlight-text">
+                                    Em constante<br>aprendizado
+                                </div>
+                            </div>
 
-                        <!-- Descrição -->
-                        <p class="card-text">
-                            Aqui estão alguns dos projetos que desenvolvi durante minha jornada de estudos. Cada um
-                            deles foi uma oportunidade de praticar, aprender e evoluir como desenvolvedor.
-                        </p>
+                            <!-- Item 2: Foco em projetos reais -->
+                            <div class="highlight-item">
+                                <div class="highlight-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <div class="highlight-text">
+                                    Foco em<br>projetos reais
+                                </div>
+                            </div>
 
-                        <!-- Filtros por Categoria -->
-                        <div class="filter-pills-row" role="tablist" aria-label="Filtrar projetos por categoria">
-                            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
-                                Todos
-                            </button>
-                            <button class="filter-btn" data-filter="html-css" role="tab" aria-selected="false">
-                                HTML e CSS
-                            </button>
-                            <button class="filter-btn" data-filter="javascript" role="tab" aria-selected="false">
-                                JavaScript
-                            </button>
-                            <button class="filter-btn" data-filter="python" role="tab" aria-selected="false">
-                                Python
-                            </button>
+                            <!-- Item 3: Novos Desafios -->
+                            <div class="highlight-item">
+                                <div class="highlight-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <div class="highlight-text">
+                                    Preparado para<br>novos desafios
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    <!-- CARD 2: EM BREVE / MAIS PROJETOS -->
-                    <section class="glass-card soon-card" aria-labelledby="soon-title">
+                    <!-- CARD 2: ALGO MAIS (ÁREAS DE INTERESSE) -->
+                    <section class="glass-card skills-interests-card" aria-labelledby="interests-title">
                         <div class="card-glow"></div>
 
-                        <!-- Cabeçalho do Card com Ícone de Lâmpada -->
-                        <div class="header-badge-row">
-                            <div class="icon-badge" aria-hidden="true">
+                        <div class="interests-header-row">
+                            <div class="interests-icon-circle" aria-hidden="true">
                                 <i class="fa-regular fa-lightbulb"></i>
                             </div>
-                            <span class="badge-caption">EM BREVE</span>
+                            <span class="interests-caption">ALGO MAIS</span>
                         </div>
 
-                        <!-- Título Secundário -->
-                        <h2 class="card-title-secondary" id="soon-title">
-                            Mais projetos<br>na minha jornada
+                        <h2 class="interests-title" id="interests-title">
+                            Também tenho interesse em...
                         </h2>
 
-                        <!-- Descrição -->
-                        <p class="card-text-secondary">
-                            Estou sempre desenvolvendo novos projetos e aprendendo novas tecnologias. Volte em breve
-                            para ver as novidades!
+                        <p class="interests-desc">
+                            Além das tecnologias principais, estou estudando e me aprofundando em outras áreas que
+                            complementam o desenvolvimento e me ajudam a evoluir como profissional.
                         </p>
 
-                        <!-- Links para Redes Sociais -->
-                        <div class="social-icons-row">
-                            <a href="https://github.com/vinii-gabss" target="_blank" rel="noopener noreferrer"
-                                class="social-link" aria-label="Perfil do GitHub de Vinicius Gabriel">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                                aria-label="Perfil do LinkedIn de Vinicius Gabriel">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="mailto:viniigabs@gmail.com" class="social-link"
-                                aria-label="Enviar email para Vinicius Gabriel">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
+                        <!-- Tags / Pílulas de Interesses -->
+                        <div class="interests-pills-wrap">
+                            <span class="interest-pill">Banco de Dados</span>
+                            <span class="interest-pill">Redes</span>
+                            <span class="interest-pill">Segurança da Informação</span>
+                            <span class="interest-pill">Gestão de Projetos</span>
+                            <span class="interest-pill">Inteligência Artificial</span>
                         </div>
                     </section>
 
                 </div>
 
-                <!-- COLUNA DA DIREITA: PROJETOS EM DESTAQUE -->
+                <!-- ==========================================
+             COLUNA DA DIREITA (CARD PRINCIPAL)
+             ========================================== -->
                 <div class="column-right">
 
-                    <section class="glass-card featured-projects-card" aria-labelledby="featured-title">
+                    <section class="glass-card skills-main-card" aria-labelledby="skills-tech-title">
                         <div class="card-glow"></div>
 
-                        <!-- Topo do Card de Projetos -->
-                        <div class="projects-header-row">
-                            <div class="projects-header-left">
-                                <span class="badge-caption">PROJETOS EM DESTAQUE</span>
-                                <h2 class="projects-main-title" id="featured-title">
-                                    Confira alguns dos meus projetos
-                                </h2>
+                        <!-- Cabeçalho da Seção Principal -->
+                        <header class="skills-main-header">
+                            <span class="skills-badge-caption">TECNOLOGIAS PRINCIPAIS</span>
+                            <h2 class="skills-main-title" id="skills-tech-title">
+                                Ferramentas e linguagens
+                            </h2>
+                            <p class="skills-main-subtitle">
+                                Estas são as tecnologias que já tenho experiência e estou utilizando nos meus projetos e
+                                estudos.
+                            </p>
+                        </header>
+
+                        <!-- GRADE 3x3 DE CARDS DE HABILIDADES TÉCNICAS -->
+                        <div class="tech-skills-grid">
+
+                            <!-- 1. HTML5 (90%) -->
+                            <article class="tech-skill-card" data-percent="90">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <path fill="#E44D26" d="M4 2.5l2.6 25.5 9.4 2.8 9.4-2.8L28 2.5H4z" />
+                                            <path fill="#F16529" d="M16 4.7v23.7l7.5-2.2 2-21.5H16z" />
+                                            <path fill="#EBEBEB"
+                                                d="M16 11h-5.4l.4 4.5H16V11zm0 8.8l-.1.02-3.8-1-.2-2.7H8.6l.4 5.3 7 1.9v-3.5z" />
+                                            <path fill="#FFFFFF"
+                                                d="M16 11v4.5h5.8l-.6 6.3-5.2 1.5v3.6l9.3-2.6.9-13.3H16z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">HTML5</h3>
+                                        <p class="tech-desc">Estrutura e semântica das páginas web.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">90%</span>
+                                </div>
+                            </article>
+
+                            <!-- 2. CSS3 (85%) -->
+                            <article class="tech-skill-card" data-percent="85">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <path fill="#1572B6" d="M4 2.5l2.6 25.5 9.4 2.8 9.4-2.8L28 2.5H4z" />
+                                            <path fill="#33A9DC" d="M16 4.7v23.7l7.5-2.2 2-21.5H16z" />
+                                            <path fill="#EBEBEB"
+                                                d="M16 11h-5.4l.4 4.5H16V11zm0 8.8l-.1.02-3.8-1-.2-2.7H8.6l.4 5.3 7 1.9v-3.5z" />
+                                            <path fill="#FFFFFF"
+                                                d="M16 11v4.5h5.8l-.3 3.4H16v4.5h4.6l-.5 5.4-4.1 1.1v3.6l9.3-2.6.9-19.9H16z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">CSS3</h3>
+                                        <p class="tech-desc">Estilização, layout e responsividade.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">85%</span>
+                                </div>
+                            </article>
+
+                            <!-- 3. JavaScript (50%) -->
+                            <article class="tech-skill-card" data-percent="50">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <rect width="32" height="32" rx="7" fill="#F7DF1E" />
+                                            <text x="16" y="23" font-family="'Plus Jakarta Sans', system-ui, sans-serif"
+                                                font-weight="900" font-size="15" fill="#000000" text-anchor="middle"
+                                                letter-spacing="-0.5px">JS</text>
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">JavaScript</h3>
+                                        <p class="tech-desc">Interatividade e lógica de programação.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="50"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">50%</span>
+                                </div>
+                            </article>
+
+                            <!-- 4. Git (70%) -->
+                            <article class="tech-skill-card" data-percent="70">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <rect width="21" height="21" rx="4" transform="translate(16 1.2) rotate(45)"
+                                                fill="#F05032" />
+                                            <circle cx="16" cy="11.5" r="2.2" fill="#FFFFFF" />
+                                            <circle cx="11.5" cy="16.5" r="2.2" fill="#FFFFFF" />
+                                            <circle cx="20.5" cy="20.5" r="2.2" fill="#FFFFFF" />
+                                            <path d="M16 13.5v5m-3-1.8l5.5 3" stroke="#FFFFFF" stroke-width="2.2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">Git</h3>
+                                        <p class="tech-desc">Controle de versão e organização de código.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">70%</span>
+                                </div>
+                            </article>
+
+                            <!-- 5. GitHub (65%) -->
+                            <article class="tech-skill-card" data-percent="65">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <circle cx="16" cy="16" r="15" fill="#181717" />
+                                            <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16 7a9 9 0 00-2.85 17.54c.45.08.62-.2.62-.43v-1.52c-2.5.54-3.03-1.2-3.03-1.2-.41-1.04-1-1.32-1-1.32-.82-.56.06-.55.06-.55.9.06 1.38.93 1.38.93.8 1.38 2.1.98 2.62.75.08-.58.31-.98.57-1.2-2-.23-4.1-1-4.1-4.45 0-.98.35-1.79.93-2.42-.09-.23-.4-1.14.09-2.39 0 0 .76-.24 2.48.92a8.6 8.6 0 014.52 0c1.72-1.16 2.48-.92 2.48-.92.49 1.25.18 2.16.09 2.39.58.63.93 1.44.93 2.42 0 3.46-2.1 4.22-4.11 4.44.32.28.61.83.61 1.67v2.48c0 .24.16.52.62.43A9 9 0 0016 7z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">GitHub</h3>
+                                        <p class="tech-desc">Hospedagem e colaboração de projetos.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="65"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">65%</span>
+                                </div>
+                            </article>
+
+                            <!-- 6. Python (30%) -->
+                            <article class="tech-skill-card" data-percent="30">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <path fill="#3776AB"
+                                                d="M15.8 4c-4.4 0-4.1 1.9-4.1 1.9l.01 2h4.2v.6h-5.9c-2.7 0-4.8 1.6-4.8 4.7 0 3 2.3 4.6 4.8 4.6h1.5v-2.2c0-2.5 2.1-4.7 4.7-4.7h4.6c1.3 0 2.3-.9 2.3-2.3V6.3S20.5 4 15.8 4zm-2.4 1.5a1 1 0 110 2 1 1 0 010-2z" />
+                                            <path fill="#FFD438"
+                                                d="M16.2 28c4.4 0 4.1-1.9 4.1-1.9l-.01-2h-4.2v-.6h5.9c2.7 0 4.8-1.6 4.8-4.7 0-3-2.3-4.6-4.8-4.6h-1.5v2.2c0 2.5-2.1 4.7-4.7 4.7h-4.6c-1.3 0-2.3.9-2.3 2.3v2.3s-2.2 2.3 2.5 2.3zm2.4-1.5a1 1 0 110-2 1 1 0 010 2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">Python</h3>
+                                        <p class="tech-desc">Lógica, automação e análise de dados.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="30"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">30%</span>
+                                </div>
+                            </article>
+
+                            <!-- 7. VS Code (80%) -->
+                            <article class="tech-skill-card" data-percent="80">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <path fill="#007ACC"
+                                                d="M23.5 3.5a1.8 1.8 0 00-1.4.6l-9.8 8.8L7.4 9.1a1.2 1.2 0 00-1.6.4l-1.6 2.3a1.2 1.2 0 00.3 1.6l4.6 3.6-4.6 3.6a1.2 1.2 0 00-.3 1.6l1.6 2.3a1.2 1.2 0 001.6.4l4.9-3.8 9.8 8.8c.4.4.9.6 1.4.6a1.8 1.8 0 001.9-1.8V5.3a1.8 1.8 0 00-1.9-1.8zm-.4 6.2v12.6l-7.3-6.3 7.3-6.3z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">VS Code</h3>
+                                        <p class="tech-desc">Editor de código principal.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">80%</span>
+                                </div>
+                            </article>
+
+                            <!-- 8. Figma (50%) -->
+                            <article class="tech-skill-card" data-percent="50">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <path fill="#F24E1E" d="M11 6a5 5 0 015-5v10h-5a5 5 0 010-10z"
+                                                transform="translate(0 3)" />
+                                            <path fill="#A259FF" d="M11 11a5 5 0 015-5v10h-5a5 5 0 010-10z"
+                                                transform="translate(0 8)" />
+                                            <path fill="#0ACF83" d="M11 16a5 5 0 015-5v5a5 5 0 01-5 5 5 5 0 010-5z"
+                                                transform="translate(0 13)" />
+                                            <path fill="#FF7262" d="M16 1a5 5 0 015 5 5 5 0 01-5 5V1z"
+                                                transform="translate(0 3)" />
+                                            <path fill="#1ABCFE" d="M21 11a5 5 0 01-5 5v-10a5 5 0 015 5z"
+                                                transform="translate(0 8)" />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">Figma</h3>
+                                        <p class="tech-desc">Design de interfaces e prototipação.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="50"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">50%</span>
+                                </div>
+                            </article>
+
+                            <!-- 9. Canva (70%) -->
+                            <article class="tech-skill-card" data-percent="70">
+                                <div class="tech-card-top">
+                                    <div class="tech-icon-box" aria-hidden="true">
+                                        <svg viewBox="0 0 32 32">
+                                            <defs>
+                                                <linearGradient id="canvaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#00C4CC" />
+                                                    <stop offset="100%" stop-color="#0284C7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="16" cy="16" r="15" fill="url(#canvaGrad)" />
+                                            <text x="16" y="20.5"
+                                                font-family="'Plus Jakarta Sans', system-ui, sans-serif"
+                                                font-weight="800" font-style="italic" font-size="10.5" fill="#FFFFFF"
+                                                text-anchor="middle">Canva</text>
+                                        </svg>
+                                    </div>
+                                    <div class="tech-info">
+                                        <h3 class="tech-name">Canva</h3>
+                                        <p class="tech-desc">Criação de artes e apresentações.</p>
+                                    </div>
+                                </div>
+                                <div class="tech-card-bottom">
+                                    <div class="tech-progress-bar" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="tech-percent">70%</span>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <!-- SEÇÃO INFERIOR: SOFT SKILLS (HABILIDADES PESSOAIS) -->
+                        <footer class="soft-skills-section">
+                            <!-- Lado Esquerdo: Título e Descrição -->
+                            <div class="soft-skills-info">
+                                <span class="soft-skills-caption">SOFT SKILLS</span>
+                                <h3 class="soft-skills-title">Habilidades pessoais</h3>
+                                <p class="soft-skills-desc">
+                                    Além da parte técnica, acredito que essas habilidades são essenciais para o meu
+                                    crescimento profissional.
+                                </p>
                             </div>
-                            <div class="projects-header-right">
-                                <span class="future-tagline">/ Construindo o meu futuro</span>
+
+                            <!-- Lado Direito: Grade com 6 Chips de Habilidades -->
+                            <div class="soft-skills-grid">
+                                <!-- 1. Organização -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Organização</span>
+                                </div>
+
+                                <!-- 2. Responsabilidade -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Responsabilidade</span>
+                                </div>
+
+                                <!-- 3. Trabalho em equipe -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Trabalho em equipe</span>
+                                </div>
+
+                                <!-- 4. Curiosidade -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Curiosidade</span>
+                                </div>
+
+                                <!-- 5. Resolução de problemas -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Resolução de problemas</span>
+                                </div>
+
+                                <!-- 6. Boa comunicação -->
+                                <div class="soft-skill-chip">
+                                    <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+                                    <span class="soft-skill-name">Boa comunicação</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- GRADE COM OS 4 PROJETOS -->
-                        <div class="projects-grid" id="projectsGrid">
-
-                            <!-- PROJETO 1: GAMES ZONE -->
-                            <article class="project-card-item" data-category="html-css" data-title="Games Zone">
-                                <div class="project-thumb-frame">
-                                    <img src="assets/images/thumb-gameszone.svg"
-                                        alt="Preview do site Games Zone com jogos Minecraft e Red Dead Redemption"
-                                        class="project-thumb-img" loading="lazy">
-                                </div>
-
-                                <div class="project-info">
-                                    <h3 class="project-name">Games Zone</h3>
-                                    <p class="project-description">
-                                        Site de jogos com design moderno e responsivo.
-                                    </p>
-
-                                    <div class="project-tags-row">
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">CSS</span>
-                                        <span class="project-tag">Responsivo</span>
-                                    </div>
-
-                                    <div class="project-actions-row">
-                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
-                                            data-project="0">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                            <span>Visualizar site</span>
-                                        </button>
-                                        <a href="https://github.com/vinii-gabss" target="_blank"
-                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                                            <i class="fa-brands fa-github"></i>
-                                            <span>Ver código</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- PROJETO 2: MEU CARRO -->
-                            <article class="project-card-item" data-category="html-css" data-title="Meu Carro">
-                                <div class="project-thumb-frame">
-                                    <img src="assets/images/thumb-meucarro.svg"
-                                        alt="Preview do site automotivo Meu Carro com showroom de veículos esportivos"
-                                        class="project-thumb-img" loading="lazy">
-                                </div>
-
-                                <div class="project-info">
-                                    <h3 class="project-name">Meu Carro</h3>
-                                    <p class="project-description">
-                                        Site automotivo com informações de veículos e layout moderno.
-                                    </p>
-
-                                    <div class="project-tags-row">
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">CSS</span>
-                                        <span class="project-tag">Responsivo</span>
-                                    </div>
-
-                                    <div class="project-actions-row">
-                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
-                                            data-project="1">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                            <span>Visualizar site</span>
-                                        </button>
-                                        <a href="https://github.com/vinii-gabss" target="_blank"
-                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                                            <i class="fa-brands fa-github"></i>
-                                            <span>Ver código</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- PROJETO 3: GRUPO INTEGRADO -->
-                            <article class="project-card-item" data-category="html-css" data-title="Grupo Integrado">
-                                <div class="project-thumb-frame">
-                                    <img src="assets/images/thumb-grupointegrado.svg"
-                                        alt="Preview da página institucional Grupo Integrado com arquitetura moderna e cursos"
-                                        class="project-thumb-img" loading="lazy">
-                                </div>
-
-                                <div class="project-info">
-                                    <h3 class="project-name">Grupo Integrado</h3>
-                                    <p class="project-description">
-                                        Página institucional com foco em apresentação de cursos e informações.
-                                    </p>
-
-                                    <div class="project-tags-row">
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">CSS</span>
-                                        <span class="project-tag">Layout Moderno</span>
-                                    </div>
-
-                                    <div class="project-actions-row">
-                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
-                                            data-project="2">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                            <span>Visualizar site</span>
-                                        </button>
-                                        <a href="https://github.com/vinii-gabss" target="_blank"
-                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                                            <i class="fa-brands fa-github"></i>
-                                            <span>Ver código</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- PROJETO 4: CALCULADORA -->
-                            <article class="project-card-item" data-category="javascript" data-title="Calculadora">
-                                <div class="project-thumb-frame">
-                                    <img src="assets/images/thumb-calculadora.svg"
-                                        alt="Preview da aplicação interativa Calculadora moderna com DevTools"
-                                        class="project-thumb-img" loading="lazy">
-                                </div>
-
-                                <div class="project-info">
-                                    <h3 class="project-name">Calculadora</h3>
-                                    <p class="project-description">
-                                        Projeto simples de calculadora com interface interativa.
-                                    </p>
-
-                                    <div class="project-tags-row">
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">CSS</span>
-                                        <span class="project-tag">JavaScript</span>
-                                    </div>
-
-                                    <div class="project-actions-row">
-                                        <button type="button" class="btn-project btn-project-primary open-preview-btn"
-                                            data-project="3">
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                            <span>Visualizar site</span>
-                                        </button>
-                                        <a href="https://github.com/vinii-gabss" target="_blank"
-                                            rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                                            <i class="fa-brands fa-github"></i>
-                                            <span>Ver código</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-
-                        </div>
-
-                        <!-- NOTA INFORMATIVA INFERIOR -->
-                        <div class="projects-footer-note">
-                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                            <span>Os projetos são atualizados conforme eu aprendo e desenvolvo novas habilidades.</span>
-                        </div>
+                        </footer>
 
                     </section>
 
@@ -329,29 +481,71 @@
         </main>
     </div>
 
-    <!-- MODAL DE PREVIEW DOS PROJETOS -->
-    <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-box">
-            <button type="button" class="modal-close" id="modalCloseBtn"
-                aria-label="Fechar janela de detalhes">&times;</button>
-            <div id="modalDetailsContent">
-                <!-- Conteúdo inserido dinamicamente via JS -->
+    <!-- MODAL DE CONTATO ELEGANTE COM GLASSMORFISMO -->
+    <div class="contact-modal-overlay" id="contactModal" aria-hidden="true" role="dialog"
+        aria-labelledby="modalContactTitle">
+        <div class="contact-modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar janela de contato">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="contact-modal-title" id="modalContactTitle">Vamos conversar!</h3>
+            <p class="contact-modal-desc">
+                Fique à vontade para entrar em contato comigo através de qualquer uma das redes ou canais abaixo:
+            </p>
+
+            <div class="contact-options-list">
+                <!-- E-mail -->
+                <a href="mailto:viniigabs@gmail.com" class="contact-item-link" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-item-details">
+                        <span class="contact-item-label">E-mail</span>
+                        <span class="contact-item-val">viniigabs@gmail.com</span>
+                    </div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/vinii-gabss" class="contact-item-link" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="contact-item-details">
+                        <span class="contact-item-label">GitHub</span>
+                        <span class="contact-item-val">github.com/vinii-gabss</span>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" class="contact-item-link" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-item-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-item-details">
+                        <span class="contact-item-label">LinkedIn</span>
+                        <span class="contact-item-val">Conectar no LinkedIn</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- SCRIPT DE MICRO-INTERAÇÕES (FILTRAGEM, MODAL E MENU MOBILE) -->
+    <!-- SCRIPT DE INTERAÇÕES E ANIMAÇÕES -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Menu Mobile
+            // 1. Menu Mobile Toggle
             const mobileToggle = document.getElementById('mobileToggle');
             const navMenu = document.getElementById('navMenu');
 
             if (mobileToggle && navMenu) {
-                mobileToggle.addEventListener('click', () => {
+                mobileToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     navMenu.classList.toggle('open');
-                    const isOpen = navMenu.classList.contains('open');
-                    mobileToggle.setAttribute('aria-expanded', isOpen);
+                    const isExpanded = navMenu.classList.contains('open');
+                    mobileToggle.setAttribute('aria-expanded', isExpanded);
                 });
 
                 navMenu.querySelectorAll('.nav-link').forEach(link => {
@@ -360,129 +554,98 @@
                         mobileToggle.setAttribute('aria-expanded', 'false');
                     });
                 });
+
+                document.addEventListener('click', (e) => {
+                    if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                        navMenu.classList.remove('open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
 
-            // 2. Sistema de Filtro dos Projetos
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card-item');
+            // 2. Animação suave das barras de progresso ao carregar
+            const skillCards = document.querySelectorAll('.tech-skill-card');
 
-            filterButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterButtons.forEach(b => {
-                        b.classList.remove('active');
-                        b.setAttribute('aria-selected', 'false');
-                    });
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-selected', 'true');
-
-                    const filter = btn.getAttribute('data-filter');
-
-                    projectCards.forEach(card => {
-                        const category = card.getAttribute('data-category');
-                        if (filter === 'all' || category === filter) {
-                            card.style.display = 'flex';
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(12px)';
-                            setTimeout(() => {
-                                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 40);
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
+            const animateProgressBars = () => {
+                skillCards.forEach((card, index) => {
+                    const percent = card.getAttribute('data-percent') || '0';
+                    const fill = card.querySelector('.tech-progress-fill');
+                    if (fill) {
+                        setTimeout(() => {
+                            fill.style.width = `${percent}%`;
+                        }, 120 + (index * 60)); // Efeito escalonado sutil
+                    }
                 });
-            });
+            };
 
-            // 3. Modal de Visualização Rápida dos Projetos
-            const modal = document.getElementById('projectModal');
-            const modalClose = document.getElementById('modalCloseBtn');
-            const modalContent = document.getElementById('modalDetailsContent');
-            const previewButtons = document.querySelectorAll('.open-preview-btn');
+            // Executa animação das barras após breve render
+            setTimeout(animateProgressBars, 150);
 
-            const projectsData = [
-                {
-                    title: 'Games Zone',
-                    category: 'Front-end & Games UI',
-                    img: 'assets/images/thumb-gameszone.svg',
-                    description: 'Portal de entretenimento e jogos com catálogo visual dinâmico, layouts imersivos inspirados em títulos de sucesso como Minecraft e Red Dead Redemption, totalmente responsivo.',
-                    tags: ['HTML5', 'CSS3', 'Design Responsivo', 'Flexbox / Grid']
-                },
-                {
-                    title: 'Meu Carro',
-                    category: 'Web Design Automotivo',
-                    img: 'assets/images/thumb-meucarro.svg',
-                    description: 'Showroom digital moderno para exibição de veículos de luxo e alta performance, com estética visual sofisticada em modo escuro, tipografia arrojada e detalhes técnicos.',
-                    tags: ['HTML5', 'CSS3', 'Layout Moderno', 'UI/UX']
-                },
-                {
-                    title: 'Grupo Integrado',
-                    category: 'Página Institucional',
-                    img: 'assets/images/thumb-grupointegrado.svg',
-                    description: 'Site institucional focado na apresentação clara de cursos acadêmicos, diferenciais de infraestrutura moderna e canais diretos de contato para futuros estudantes.',
-                    tags: ['HTML5', 'CSS3', 'Grid Layout', 'Identidade Visual']
-                },
-                {
-                    title: 'Calculadora Interativa',
-                    category: 'Aplicação Web Interativa',
-                    img: 'assets/images/thumb-calculadora.svg',
-                    description: 'Calculadora completa construída com JavaScript puro, oferecendo operações matemáticas essenciais, histórico visual e suporte a teclado numérico com interface intuitiva.',
-                    tags: ['JavaScript Vanilla', 'HTML5', 'CSS3 Moderno', 'Lógica de Programação']
-                }
-            ];
+            // 3. Modal de Contato
+            const contactModal = document.getElementById('contactModal');
+            const contactNavLink = document.getElementById('contactNavLink');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-            previewButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const projectIndex = parseInt(btn.getAttribute('data-project'), 10);
-                    const proj = projectsData[projectIndex] || projectsData[0];
+            const openContactModal = (e) => {
+                if (e) e.preventDefault();
+                if (!contactModal) return;
+                contactModal.classList.add('active');
+                contactModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            };
 
-                    const tagsHtml = proj.tags.map(t => `<span class="project-tag">${t}</span>`).join('');
-
-                    modalContent.innerHTML = `
-            <span class="badge-caption" style="display:block; margin-bottom: 0.25rem;">${proj.category}</span>
-            <h3 style="font-size: 1.6rem; color: #0f2847; font-weight: 800; margin-bottom: 0.5rem;">${proj.title}</h3>
-            <img src="${proj.img}" alt="${proj.title}" class="modal-body-img" />
-            <p style="color: #2a4768; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">${proj.description}</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem;">
-              ${tagsHtml}
-            </div>
-            <div style="display: flex; gap: 0.75rem;">
-              <a href="https://github.com/vinii-gabss" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-primary" style="padding: 0.65rem 1.25rem;">
-                <i class="fa-brands fa-github"></i> Visitar Repositório
-              </a>
-            </div>
-          `;
-
-                    modal.classList.add('active');
-                    modal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            const closeModal = () => {
-                modal.classList.remove('active');
-                modal.setAttribute('aria-hidden', 'true');
+            const closeContactModal = () => {
+                if (!contactModal) return;
+                contactModal.classList.remove('active');
+                contactModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
             };
 
-            if (modalClose) {
-                modalClose.addEventListener('click', closeModal);
+            if (contactNavLink) {
+                contactNavLink.addEventListener('click', openContactModal);
             }
 
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closeModal();
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeContactModal);
+            }
+
+            if (contactModal) {
+                contactModal.addEventListener('click', (e) => {
+                    if (e.target === contactModal) {
+                        closeContactModal();
                     }
                 });
             }
 
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
+                if (e.key === 'Escape' && contactModal && contactModal.classList.contains('active')) {
+                    closeContactModal();
                 }
             });
+
+            // 4. Efeito 3D sutil ao mover o mouse nos cards de vidro (desktop)
+            if (window.matchMedia('(min-width: 1025px)').matches) {
+                const cards = document.querySelectorAll('.glass-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+
+                        const rotateX = ((y - centerY) / centerY) * -2.2;
+                        const rotateY = ((x - centerX) / centerX) * 2.2;
+
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                    });
+                });
+            }
         });
     </script>
 </body>

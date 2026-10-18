@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Vinícius Gabriel</title>
+  <meta name="description"
+    content="Entre em contato com Vinícius Gabriel. Conecte-se comigo pelo WhatsApp, Email, Instagram, GitHub, LinkedIn ou X.">
+
+  <!-- Google Fonts: Plus Jakarta Sans e Caveat para o doodle de conexão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="projeto.css">
+</head>
+
+<body>
+
+  <!-- Fundo dinâmico com nuvens celestes e iluminação -->
+  <div class="sky-background" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="sun-glare"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <!-- BARRA DE NAVEGAÇÃO / HEADER -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo / Marca -->
+        <a href="index.html" class="brand" aria-label="Ir para a página inicial de Vinícius Gabriel">
+          <span class="brand-monogram">VG</span>
+          <span class="brand-divider"></span>
+          <span class="brand-name">Vinícius Gabriel</span>
+        </a>
+
+        <!-- Menu de Navegação -->
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li><a href="contato.html" class="nav-link active">Contato</a></li>
+            <li><a href="index.html" class="nav-link">Sobre</a></li>
+            <li><a href="projeto.html" class="nav-link">Projetos</a></li>
+            <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+
+          </ul>
+        </nav>
+
+        <!-- Botão Mobile Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (ESTRUTURA EM DUAS COLUNAS COM CARDS GLASS) -->
+    <main class="main-content" id="conteudo-contato">
+      <div class="cards-grid">
+
+        <!-- ==========================================
+             COLUNA DA ESQUERDA (3 CARDS EMPILHADOS)
+             ========================================== -->
+        <div class="column-left">
+
+          <!-- CARD 1: HERO CONVERSAR -->
+          <section class="glass-card contact-hero-card" aria-labelledby="contact-hero-title">
+            <div class="card-glow"></div>
+
+            <span class="contact-badge-caption">VAMOS CONVERSAR?</span>
+            <h1 class="contact-hero-title" id="contact-hero-title">
+              Entre em contato<br>comigo!
+            </h1>
+            <p class="contact-hero-desc">
+              Se você tem alguma dúvida, sugestão, proposta ou apenas quer trocar uma ideia, será um prazer falar com
+              você. Escolha a melhor forma de contato abaixo e me chame!
+            </p>
+          </section>
+
+          <!-- CARD 2: MEUS CONTATOS DIRETOS -->
+          <section class="glass-card contact-details-card" aria-labelledby="contact-details-title">
+            <div class="card-glow"></div>
+
+            <div class="contact-header-badge">
+              <div class="contact-icon-badge" aria-hidden="true">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <span class="contact-badge-caption" id="contact-details-title" style="margin-bottom: 0;">MEUS
+                CONTATOS</span>
+            </div>
+
+            <!-- Lista de Meios de Contato -->
+            <div class="contact-info-list">
+
+              <!-- Email -->
+              <a href="mailto:vinicius.g.ferreira.alves@email.com" class="contact-info-item"
+                aria-label="Enviar email para Vinícius Gabriel">
+                <div class="contact-info-icon-box" aria-hidden="true">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contact-info-text-group">
+                  <span class="contact-info-label">Email</span>
+                  <span class="contact-info-val">vinicius.g.ferreira.alves@email.com</span>
+                </div>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/5544988351698" target="_blank" rel="noopener noreferrer" class="contact-info-item"
+                aria-label="Chamar Vinícius Gabriel no WhatsApp">
+                <div class="contact-info-icon-box" aria-hidden="true">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-info-text-group">
+                  <span class="contact-info-label">WhatsApp</span>
+                  <span class="contact-info-val">(44)988351698</span>
+                </div>
+              </a>
+
+              <!-- Localização -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon-box" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-info-text-group">
+                  <span class="contact-info-label">Localização</span>
+                  <span class="contact-info-val">Roncador - PR, Brasil</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Indicador de Disponibilidade -->
+            <div class="availability-status">
+              <span class="status-dot-pulse" aria-hidden="true"></span>
+              <span>Disponível para novas oportunidades</span>
+            </div>
+          </section>
+
+          <!-- CARD 3: BANNER DE AGRADECIMENTO -->
+          <aside class="glass-card contact-thanks-card" aria-label="Agradecimento pela visita">
+            <div class="contact-thanks-left">
+              <div class="thanks-star-box" aria-hidden="true">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="thanks-text-group">
+                <div class="thanks-title">
+                  Obrigado por visitar <strong>meu portfólio!</strong>
+                </div>
+                <div class="thanks-subtitle">
+                  Sua presença aqui já é muito especial.
+                </div>
+              </div>
+            </div>
+            <div class="thanks-arrow-icon" aria-hidden="true">
+              <i class="fa-solid fa-angles-right"></i>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- ==========================================
+             COLUNA DA DIREITA (CARD DE REDES SOCIAIS)
+             ========================================== -->
+        <div class="column-right">
+
+          <section class="glass-card contact-social-card" aria-labelledby="social-main-title">
+            <div class="card-glow"></div>
+
+            <!-- Cabeçalho com Texto e Doodle "Vamos conectar?" -->
+            <header class="social-header-wrap">
+              <div class="social-header-left">
+                <span class="contact-badge-caption">MINHAS REDES SOCIAIS</span>
+                <h2 class="social-main-title" id="social-main-title">
+                  Me acompanhe nas redes<br>e fique por dentro!
+                </h2>
+                <p class="social-main-subtitle">
+                  Compartilho por lá um pouco da minha rotina, estudos, projetos e novidades. Sinta-se à vontade para me
+                  seguir!
+                </p>
+              </div>
+
+              <!-- Doodle Estilo Manuscrito -->
+              <div class="connect-doodle" aria-hidden="true">
+                <span class="doodle-text">Vamos<br>conectar?</span>
+                <svg class="doodle-arrow-svg" viewBox="0 0 50 45" fill="none">
+                  <path d="M12 6 C 26 15, 36 24, 26 36 M 26 36 L 20 30 M 26 36 L 29 29" stroke="#60a5fa"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </header>
+
+            <!-- GRADE 3x2 DE REDES SOCIAIS -->
+            <div class="social-cards-grid">
+
+              <!-- 1. INSTAGRAM -->
+              <a href="https://instagram.com/vinii_gabss" target="_blank" rel="noopener noreferrer"
+                class="social-card-item" aria-label="Perfil do Instagram de Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <defs>
+                        <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#FFDC80" />
+                          <stop offset="25%" stop-color="#F77737" />
+                          <stop offset="50%" stop-color="#F56040" />
+                          <stop offset="75%" stop-color="#FD1D1D" />
+                          <stop offset="100%" stop-color="#C13584" />
+                        </linearGradient>
+                      </defs>
+                      <rect width="36" height="36" rx="9" fill="url(#instaGrad)" />
+                      <rect x="8.5" y="8.5" width="19" height="19" rx="5.5" fill="none" stroke="#FFFFFF"
+                        stroke-width="2.2" />
+                      <circle cx="18" cy="18" r="4.5" fill="none" stroke="#FFFFFF" stroke-width="2.2" />
+                      <circle cx="23.2" cy="12.8" r="1.3" fill="#FFFFFF" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">Instagram</h3>
+                    <p class="social-platform-desc">Acompanhe meu dia a dia, projetos e novidades.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">@vinii_gabss</span>
+                </div>
+              </a>
+
+              <!-- 2. WHATSAPP -->
+              <a href="https://wa.me/5544988351698" target="_blank" rel="noopener noreferrer" class="social-card-item"
+                aria-label="Enviar mensagem no WhatsApp para Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <rect width="36" height="36" rx="9" fill="#25D366" />
+                      <path fill="#FFFFFF"
+                        d="M18 7.5a10.5 10.5 0 00-9.1 15.7l-1.4 5.3 5.4-1.4a10.5 10.5 0 105.1-19.6zm6.2 14.8c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.1-4.2-1.1a14 14 0 01-6.2-5.5 7.1 7.1 0 01-1.5-3.8c0-2 .9-2.9 1.3-3.3.4-.4.8-.5 1.1-.5.3 0 .5 0 .8.1.3.1.6.8.8 1.2.3.6.8 1.9.9 2 .1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.5-.2.9.3.6 1.4 2.3 3.1 3.7 2.1 1.9 3.8 2.5 4.4 2.8.5.2.8.2 1.1-.1.3-.4 1.3-1.5 1.6-2 .3-.5.7-.4 1.1-.2.5.2 2.9 1.4 3.4 1.6.5.3.8.4.9.6.1.3.1 1.6-.2 2.4z" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">WhatsApp</h3>
+                    <p class="social-platform-desc">Fale comigo diretamente pelo WhatsApp.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">(44) 9 98835-1698</span>
+                </div>
+              </a>
+
+              <!-- 3. X (TWITTER) -->
+              <a href="https://x.com/vinii_gabss" target="_blank" rel="noopener noreferrer" class="social-card-item"
+                aria-label="Perfil do X / Twitter de Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <rect width="36" height="36" rx="9" fill="#000000" />
+                      <path fill="#FFFFFF"
+                        d="M22.5 9.5h2.8l-6.1 7 7.2 9.5h-5.6l-4.4-5.8-5 5.8h-2.8l6.5-7.5L8.5 9.5h5.8l4 5.3L22.5 9.5zm-1 14.8h1.5L14.7 11h-1.6l8.4 13.3z" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">X (Twitter)</h3>
+                    <p class="social-platform-desc">Novidades, ideias e conversas sobre tecnologia.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">@vinii_gabss</span>
+                </div>
+              </a>
+
+              <!-- 4. GITHUB -->
+              <a href="https://github.com/vinii-gabss" target="_blank" rel="noopener noreferrer"
+                class="social-card-item" aria-label="Perfil do GitHub de Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <circle cx="18" cy="18" r="17" fill="#181717" />
+                      <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18 8a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.64.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0018 8z" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">GitHub</h3>
+                    <p class="social-platform-desc">Acompanhe meus projetos e contribua se quiser.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">github.com/vinii-gabss</span>
+                </div>
+              </a>
+
+              <!-- 5. LINKEDIN -->
+              <a href="https://www.linkedin.com/in/vinicius-gabriel-8a11422b5/" target="_blank" rel="noopener noreferrer" class="social-card-item"
+                aria-label="Perfil do LinkedIn de Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <rect width="36" height="36" rx="9" fill="#0A66C2" />
+                      <path fill="#FFFFFF"
+                        d="M12.5 14.5v11H9v-11h3.5zm-1.8-5.5a2 2 0 110 4 2 2 0 010-4zm15.8 16.5h-3.5v-5.6c0-1.3-.5-2.2-1.7-2.2-.9 0-1.5.6-1.7 1.2v6.6h-3.5s.05-10 0-11h3.5v1.6c.4-.7 1.3-1.8 3.1-1.8 2.3 0 4 1.5 4 4.8v6.4z" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">LinkedIn</h3>
+                    <p class="social-platform-desc">Vamos nos conectar profissionalmente.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">/in/vinicius-gabriel</span>
+                </div>
+              </a>
+
+              <!-- 6. EMAIL -->
+              <a href="mailto:vinicius.g.ferreira.alves@email.com" class="social-card-item" id="cardEmailLink"
+                aria-label="Enviar email para Vinicius Gabriel">
+                <div class="social-card-top">
+                  <div class="social-brand-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 36 36">
+                      <defs>
+                        <linearGradient id="emailCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#0284C7" />
+                          <stop offset="100%" stop-color="#2563EB" />
+                        </linearGradient>
+                      </defs>
+                      <rect width="36" height="36" rx="9" fill="url(#emailCardGrad)" />
+                      <path fill="#FFFFFF"
+                        d="M9.5 12h17c.8 0 1.5.7 1.5 1.5v11c0 .8-.7 1.5-1.5 1.5h-17c-.8 0-1.5-.7-1.5-1.5v-11c0-.8.7-1.5 1.5-1.5zm0 2.2v9.8l6.3-5.5L9.5 14.2zm1.2-1.2l7.3 5.8 7.3-5.8H10.7zm15.8 1.2l-6.3 4.3 6.3 5.5V14.2zm-7.6 5.4l-1.9 1.5-1.9-1.5-6.1 5.4h16l-6.1-5.4z" />
+                    </svg>
+                  </div>
+                  <div class="social-text-info">
+                    <h3 class="social-platform-title">Email</h3>
+                    <p class="social-platform-desc">Me envie uma mensagem diretamente por aqui.</p>
+                  </div>
+                </div>
+                <div class="social-action-pill">
+                  <span class="action-arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                  <span class="action-pill-text">vinicius.g.ferreira.alves</span>
+                </div>
+              </a>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- TOAST DE COPIADO / FEEDBACK -->
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+    <span id="toastMessage">Copiado para a área de transferência!</span>
+  </div>
+
+  <!-- SCRIPT DE INTERAÇÕES E ANIMAÇÕES -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Menu Mobile Toggle
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navMenu.classList.toggle('open');
+          const isExpanded = navMenu.classList.contains('open');
+          mobileToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+            navMenu.classList.remove('open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 2. Feedback amigável ao copiar ou interagir
+      const copyToast = document.getElementById('copyToast');
+      const toastMessage = document.getElementById('toastMessage');
+
+      const showToast = (msg) => {
+        if (!copyToast) return;
+        toastMessage.textContent = msg;
+        copyToast.classList.add('show');
+        setTimeout(() => {
+          copyToast.classList.remove('show');
+        }, 2800);
+      };
+
+      // 3. Efeito 3D sutil ao mover o mouse nos cards de vidro (desktop)
+      if (window.matchMedia('(min-width: 1025px)').matches) {
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -2.2;
+            const rotateY = ((x - centerX) / centerX) * 2.2;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
