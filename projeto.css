@@ -1067,12 +1067,53 @@ body {
   line-height: 1.5;
 }
 
-/* Grade 3x3 com as Tecnologias Principais */
+/* Grade com as Tecnologias Principais (com rolagem vertical interna) */
 .tech-skills-grid {
+  --scrollbar-thumb: rgba(2, 132, 199, 0.55);
+  --scrollbar-thumb-hover: #0284c7;
+  --scrollbar-track: rgba(15, 45, 80, 0.06);
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.15rem;
   margin-bottom: 2.2rem;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 0.35rem 0.55rem 0.6rem 0.35rem;
+
+  /* Estilização moderna da barra de rolagem (padrão W3C) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.tech-skills-grid:focus-visible {
+  outline: 2px solid rgba(2, 132, 199, 0.4);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+/* Fallback de estilização da barra de rolagem para navegadores WebKit/Blink (Chrome, Edge, Safari) */
+.tech-skills-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tech-skills-grid::-webkit-scrollbar-track {
+  background: rgba(15, 45, 80, 0.06);
+  border-radius: 9999px;
+}
+
+.tech-skills-grid::-webkit-scrollbar-thumb {
+  background: rgba(2, 132, 199, 0.55);
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+.tech-skills-grid::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
 }
 
 .tech-skill-card {
@@ -1390,6 +1431,7 @@ body {
 @media (max-width: 1120px) {
   .tech-skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    max-height: 400px;
   }
 }
 
@@ -1408,6 +1450,8 @@ body {
   .tech-skills-grid {
     grid-template-columns: 1fr;
     gap: 0.9rem;
+    max-height: 380px;
+    padding-right: 0.45rem;
   }
 
   .skills-highlights-panel {

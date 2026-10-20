@@ -47,7 +47,7 @@
                     <ul class="nav-list">
                         <li><a href="contato.html" class="nav-link">Contato</a></li>
                         <li><a href="index.html" class="nav-link">Sobre</a></li>
-                        <li><a href="projeto.html" class="nav-link">Projetos</a></li>
+
                         <li><a href="habilidades.html" class="nav-link active">Habilidades</a></li>
 
                     </ul>
@@ -174,8 +174,8 @@
                             </p>
                         </header>
 
-                        <!-- GRADE 3x3 DE CARDS DE HABILIDADES TÉCNICAS -->
-                        <div class="tech-skills-grid">
+                        <!-- GRADE DE CARDS DE HABILIDADES TÉCNICAS (COM ROLAGEM INTERNA) -->
+                        <div class="tech-skills-grid" tabindex="0" role="region" aria-label="Lista de ferramentas e tecnologias">
 
                             <!-- 1. HTML5 (90%) -->
                             <article class="tech-skill-card" data-percent="90">
@@ -418,6 +418,27 @@
                                     <span class="tech-percent">70%</span>
                                 </div>
                             </article>
+
+                            <!-- 9. Artcraft (70%) -->
+                              <article class="tech-skill-card" data-percent="70">
+                               <div class="tech-card-top">
+                                  <div class="tech-icon-box" aria-hidden="true">
+                                  <img src="assets/images/artcraft-icon.svg" alt="">
+                                    </div>
+                                     <div class="tech-info">
+                                     <h3 class="tech-name">Pacote Artcraft</h3>
+                                   <p class="tech-desc">Criação de artes com inteligencia artificial.</p>
+                                    </div>
+                                   </div>
+                               <div class="tech-card-bottom">
+                            <div class="tech-progress-bar" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        <div class="tech-progress-fill" style="width: 0%;"></div>
+                     </div>
+                     <span class="tech-percent">70%</span>
+                                      </div>
+                        </article>
+
 
                         </div>
 
